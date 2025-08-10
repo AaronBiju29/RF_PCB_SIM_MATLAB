@@ -159,7 +159,7 @@ d = dielectric('Name', 'Rogers4003C', 'EpsilonR', dk, 'LossTangent', df, 'Thickn
 m = metal('Name', 'Cu', 'Conductivity', c, 'Thickness', t);
 
 %Add vias near to the differential pair
-vias_data = readtable('Chip Board TRx PCB_neutral_vias.csv');
+vias_data = readtable('IMPORT CSV FILE CONTAINING VIAS INFORMATION');
 pad_vias_mm = 2e-3;
 via_x = vias_data{:, 2} * inch_to_m; 
 via_y = vias_data{:, 3} * inch_to_m; 
@@ -226,3 +226,4 @@ rfplot(spar);
 % des_diff_vias = des_diff + total_vias; 
 % ps_des_diff_vias = polyshape(des_diff_vias.Vertices(:, 1:2)); 
 % vert_des_diff_vias = ps_des_diff_vias.Vertices;
+
